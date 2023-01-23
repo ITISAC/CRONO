@@ -67,7 +67,7 @@ void count(){                         //entra nel conteggio, ok
     int Ucs = time2 - (Dcs*10);             //unità di centesimi di secondo
     tempo[1] = Dcs;
     tempo[0] = Ucs;
-    Serial.println( Ds );
+    Serial.println( Dcs );
 }
 
 void trasmissione(){
