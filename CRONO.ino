@@ -49,7 +49,7 @@ void count(){                         //entra nel conteggio, ok
     int time2 = time1;                    // minuti interi
     int Dm = time2 /10;                   //decine di minuti
     int Um = time2 - (Dm*10);             //unità di minuti
-    tempo[5] = Dm;
+    tempo[5] = Dm;                    //sembra ok
     tempo[4] = Um;
     (float)time2;                          
     float time3 = time1 - time2;         // resto calcolo minuti
@@ -67,7 +67,7 @@ void count(){                         //entra nel conteggio, ok
     int Ucs = time2 - (Dcs*10);             //unità di centesimi di secondo
     tempo[1] = Dcs;
     tempo[0] = Ucs;
-    Serial.println( Dm );
+    Serial.println( Ds );
 }
 
 void trasmissione(){
