@@ -34,10 +34,9 @@ button.loop();
 
   if( button.isPressed() ){               //controllo pulsante e se premuto
     timestart = millis();                 //acquisizione timestart per conteggio
-    Serial.println(1);
-    count();
-    trasmissione();
-  }
+    count();                              //funzione conteggio
+    trasmissione();                       //funzione trasmissione
+  }                                   //controllato tramie serial.print, ok
   
   if( button.isPressed() ){
     delay (3000);
@@ -45,6 +44,7 @@ button.loop();
 }
 
 void count(){
+  Serial.println( "ok" );
   unsigned long timenow = millis() - timestart;  
     float time1 = timenow / 60000;        // calcolo minuti
     int time2 = time1;                    // minuti interi
