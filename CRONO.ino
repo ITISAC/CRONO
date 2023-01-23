@@ -32,12 +32,16 @@ void setup() {
 void loop() {
 button.loop(); 
 
-  if( button.isPressed() ){
-    timestart = millis();
+  if( button.isPressed() ){               //controllo pulsante e se premuto
+    timestart = millis();                 //acquisizione timestart per conteggio
     Serial.println(1);
     count();
     trasmissione();
-}
+  }
+  
+  if( button.isPressed() ){
+    delay (3000);
+  }
 }
 
 void count(){
