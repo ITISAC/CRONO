@@ -51,21 +51,20 @@ void count(){                         //entra nel conteggio, ok
     int Um = time2 - (Dm*10);             //unità di minuti
     tempo[5] = Dm;                    //sembra ok
     tempo[4] = Um;
-    (float)time2;                          
     float time3 = time1 - time2;         // resto calcolo minuti
     float time4 = time3 * 60;             // calcolo secondi
     int time5 = time4;                    //secondi interi
-    int Ds = time2 /10;                   //decine di secondi
-    int Us = time2 - (Ds*10);             //unità di secondi
-    tempo[3] = Ds;
+    int Ds = time5 /10;                   //decine di secondi
+    int Us = time5 - (Ds*10);             //unità di secondi
+    tempo[3] = Ds;                  // 1/2 ok (esegue con risultato non corretto)
     tempo[2] = Us;
     (float)time5;
     float time6 = time4 - time5;         // resto calcolo secondi
     float time7 = time6 * 100;            // calcolo centesimi di secondo
     int time8 = time7;                    // centesimi di secondo interi
-    int Dcs = time2 /10;                   //decine di centesimi di secondo
-    int Ucs = time2 - (Dcs*10);             //unità di centesimi di secondo
-    tempo[1] = Dcs;
+    int Dcs = time8 /10;                   //decine di centesimi di secondo
+    int Ucs = time8 - (Dcs*10);             //unità di centesimi di secondo
+    tempo[1] = Dcs;               
     tempo[0] = Ucs;
     Serial.println( Dcs );
 }
