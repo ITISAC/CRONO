@@ -43,8 +43,7 @@ button.loop();
   }
 }
 
-void count(){
-  Serial.println( "ok" );
+void count(){                         //entra nel conteggio, ok
   unsigned long timenow = millis() - timestart;  
     float time1 = timenow / 60000;        // calcolo minuti
     int time2 = time1;                    // minuti interi
@@ -68,6 +67,7 @@ void count(){
     int Ucs = time2 - (Dcs*10);             //unità di centesimi di secondo
     tempo[1] = Dcs;
     tempo[0] = Ucs;
+    Serial.println( Dm );
 }
 
 void trasmissione(){
